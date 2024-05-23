@@ -1,0 +1,31 @@
+# data processing
+pandas==2.0.2
+
+
+# machine learning
+
+scikit-learn==1.2.2
+
+# visualizations
+matplotlib==3.7.1
+seaborn==0.12.2
+
+
+# CI/CD
+pre-commit==3.7.0
+commitizen==3.20.0
+
+
+# Jupyter Notebook/Lab
+jupyterlab==4.0.1
+notebook==6.5.4
+
+
+# rest-api
+fastapi==0.95.2
+pydantic==1.10.8
+uvicorn==0.22.0
+
+
+# testing
+pytest==7.3.1

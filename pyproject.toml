@@ -1,0 +1,31 @@
+[tool.black]
+line-length = 88  # Specify the line length
+target-version = ['py310']  # Specify your Python version
+include = '\.pyi?$'
+exclude = '''  # Specify the files/dirs that should be ignored by the black formatter
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+version_files = [
+    "pyproject.toml:version",
+    "__version__.py"
+]
+update_changelog_on_bump = true
+
+[tool.ruff]
+lint.ignore = [
+    "E501",
+]
