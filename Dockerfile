@@ -17,4 +17,4 @@ COPY . .
 # Set the PYTHONPATH environment variable
 ENV PYTHONPATH=/app/src
 
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "80"]
+# CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "80"]
