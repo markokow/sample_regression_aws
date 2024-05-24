@@ -1,3 +1,13 @@
+## 0.3.0 (2024-05-24)
+
+### Feat
+
+- enable heroku for alternative deployment
+
+### Fix
+
+- fix deployment issue
+
 ## 0.2.0 (2024-05-24)
 
 ### Feat
