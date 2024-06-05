@@ -32,7 +32,7 @@ CI/CD is also implemented via Github workflow to automate the testing, building 
 
 The core feature of this API is its RESTful architecture, allowing users to predict sales based on a set of input parameters. The API provides a single endpoint, `/predict`, which accepts a POST request. The request body should include the following fields:
 
-| Field         | Type    | Constraints                                                     |
+| Field         | Type    | Input                                                           |
 | ------------- | ------- | --------------------------------------------------------------- |
 | Store         | Integer | Store entry is within the store.csv information                 |
 | DayOfWeek     | Integer | Between 1 to 7, corresponding to Sunday to Saturday             |
