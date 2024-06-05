@@ -32,16 +32,16 @@ CI/CD is also implemented via Github workflow to automate the testing, building 
 
 The core feature of this API is its RESTful architecture, allowing users to predict sales based on a set of input parameters. The API provides a single endpoint, `/predict`, which accepts a POST request. The request body should include the following fields:
 
-| Field         | Type    |
-| ------------- | ------- |
-| Store         | Integer |
-| DayOfWeek     | Integer |
-| Date          | String  |
-| Customers     | Integer |
-| Open          | Integer |
-| Promo         | Integer |
-| StateHoliday  | String  |
-| SchoolHoliday | Integer |
+| Field         | Type    | Constraints                                                     |
+| ------------- | ------- | --------------------------------------------------------------- |
+| Store         | Integer | Store entry is within the store.csv information                 |
+| DayOfWeek     | Integer | Between 1 to 7, corresponding to Sunday to Saturday             |
+| Date          | String  | Must be converted to date time format                           |
+| Customers     | Integer | Must not be negative                                            |
+| Open          | Integer | 0 = closed, 1 = open                                            |
+| Promo         | Integer | 0 = no, 1 = yes                                                 |
+| StateHoliday  | String  | a = public holiday, b = Easter holiday, c = Christmas, 0 = None |
+| SchoolHoliday | Integer | 0 = no, 1 = yes                                                 |
 
 Upon receiving the request, the API will respond with a JSON object that contains the predicted sales value. The sales value will be represented as a float and will be included in the `sales` field of the response JSON. Here is an example of the expected request and response JSON objects:
 
@@ -90,4 +90,4 @@ print(r.json())
 # for AWS one can use https://fastapi-alb-344459632.ap-southeast-1.elb.amazonaws.com/predict instead
 ```
 
-For more information about the model and its implementation details, please visit [link](https://drive.google.com/file/d/1eYWcnAxCkc1SZlWpkQuzjhVETV_Cd2jO/view?usp=sharing) for the project overview
+For more information about the model and its implementation details, please visit this [presentation](https://drive.google.com/file/d/1EqAc-g6hRHoy80VoQF-IHpJRKvz1yQC9/view) for the project overview
